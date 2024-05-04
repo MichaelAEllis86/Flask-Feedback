@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %} Register {% endblock %}
+{% block content %}
+
+<div id="loginformcontainer" class="container text-left">
+    <div class="row row-cols-2 d-flex justify-content-center">
+        <form id="loginform" method="POST">
+            <h5>Login</h5>
+            {{form.hidden_tag()}}
+
+            {% for field in form 
+            if field.widget.input_type != 'hidden'%}
+            <div class="form-group">  
+                {{field.label(class_="text-dark fw-bold form-label")}}
+                {{field(class_="form-control")}}
+
+                {% for error in field.errors %}
+                <small class="form-text text-danger">{{error}}</small>
+            
+                {% endfor %}
+            </div>
+            {% endfor %}
+            <button id="usersubmitbtn" class="btn btn-lg btn-dark loginpagebtn" type="submit">Login</button>
+        </form>
+    </div>
+    
+</div>
+
+<p>Thanks for browsing!</p>
+    
+{%endblock%}

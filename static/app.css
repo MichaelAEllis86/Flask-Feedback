@@ -1,0 +1,105 @@
+
+
+/* flash messaging formatting */
+.success{
+    color: green;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.error{
+    color:red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+/* base page */
+
+body{
+    background-color: #f7ecf767;
+}
+
+/* Navbar formatting */
+.navbar{
+    background-color:#1d6ef0;
+    overflow: hidden;
+    border-bottom:5px solid #e2bd16;
+    height: 5vh;
+}
+
+/* .navbar a{
+    float: left;
+    color:white;
+    text-align:right;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 20px;
+} */
+.basenavlink{
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.basenavlink:hover{
+    text-decoration: underline;
+    color: white;
+    text-decoration-color: #e2bd16;
+}
+
+#registerformcontainer{
+    background-color: #1d6ef0;
+    border: 5px solid black;
+    width: 30%;
+}
+
+#loginformcontainer{
+    background-color: #1d6ef0;
+    border: 5px solid black;
+    width: 30%;
+}
+
+#usersubmitbtn{
+    margin-top: 1em;
+    
+}
+
+/* Styles for user hub page below */
+
+#userpagecontainer{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-evenly;
+
+}
+
+
+#feedbacktitle{
+    text-decoration: underline;
+    text-decoration-color: #e2bd16;
+
+}
+
+#deleteuserbtn{
+    margin-bottom:150px ;
+
+}
+
+/* Styles for add feedback page below */
+#addfeedbackpagecontainer{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-evenly;
+}
+
+#secretcontaineraddfeedback{
+    background-color: #1d6ef0;
+    border: 5px solid black;
+    width: 30%;
+}
+
+#feedbackformcontainer{
+    background-color: #1d6ef0;
+    border: 5px solid black;
+    width: 30%;
+}
+

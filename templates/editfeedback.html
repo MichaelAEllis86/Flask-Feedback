@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %} Register {% endblock %}
+{% block content %}
+<div id="addfeedbackpagecontainer">
+<div id="secretcontaineraddfeedback">
+    <h3>You made it!</h3>
+    <div class="tenor-gif-embed" data-postid="26462584" data-share-method="host" data-aspect-ratio="2.42424" data-width="100%"><a href="https://tenor.com/view/lord-of-the-rings-frodo-alright-then-keep-your-secrets-smiling-gif-26462584">Lord Of The Rings Frodo GIF</a>from <a href="https://tenor.com/search/lord+of+the+rings-gifs">Lord Of The Rings GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <p>Thanks for browsing!</p>
+</div>
+<div id="feedbackformcontainer" class="container text-left">
+    <div class="row row-cols-2 d-flex justify-content-center">
+        <form id="feedbackform" method="POST">
+            <h5>Edit Feedback</h5>
+            {{form.hidden_tag()}}
+
+            {% for field in form 
+            if field.widget.input_type != 'hidden'%}
+            <div class="form-group">  
+                {{field.label(class_="text-dark fw-bold form-label")}}
+                {{field(class_="form-control")}}
+
+                {% for error in field.errors %}
+                <small class="form-text text-danger">{{error}}</small>
+            
+                {% endfor %}
+            </div>
+            {% endfor %}
+            <button id="usersubmitbtn" class="btn btn-lg btn-dark loginpagebtn" type="submit">Edit</button>
+        </form>
+    </div>
+    
+</div>
+</div>
+   
+{%endblock%}
